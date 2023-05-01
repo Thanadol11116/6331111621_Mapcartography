@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+<div id="map" style="height: 600px"></div>
+<script>
+   var map = L.map('map').setView([13.7563, 100.5018], 10);
+   var pic1 = L.icon({iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/National_Stadium_BTS_Station_%282021%29.jpg',
+ iconSize:     [50, 45], 
+ iconAnchor:   [45, 45], 
+ popupAnchor:  [0, -39]   
+});
+   var pic2 = L.icon({iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Siam_Station_Upper_Platform_201801.jpg',
+ iconSize:     [50, 45], 
+ iconAnchor:   [45, 45], 
+ popupAnchor:  [0, -39]   
+});
+   var pic3 = L.icon({iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Mo_Chit_BTS_Station_-_name_sign.jpg',
+ iconSize:     [50, 45], 
+ iconAnchor:   [45, 45], 
+ popupAnchor:  [0, -39]   
+});
+   var pic4 = L.icon({iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/BTS_Surasak_birdeye_2019.jpg',
+ iconSize:     [50, 45], 
+ iconAnchor:   [45, 45], 
+ popupAnchor:  [0, -39]   
+});
+   var pic5 = L.icon({iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B5_2020_%E0%B8%98%E0%B8%B1%E0%B8%99%E0%B8%A7%E0%B8%B2%E0%B8%84%E0%B8%A1.jpg',
+ iconSize:     [50, 45], 
+ iconAnchor:   [45, 45], 
+ popupAnchor:  [0, -39]   
+});
+
+   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var marker1 = L.marker([13.7294, 100.5231],{icon: pic1}).addTo(map);
+marker1.bindPopup("<b>National Stadium BTS Station</b><br>Lat: 13.7294, Lng: 100.5231").openPopup();
+
+var marker2 = L.marker([13.7328, 100.5162],{icon: pic2}).addTo(map);
+marker2.bindPopup("<b>Siam BTS Station</b><br>Lat: 13.7328, Lng: 100.5162").openPopup();
+
+var marker3 = L.marker([13.7387, 100.5603],{icon: pic3}).addTo(map);
+marker3.bindPopup("<b>Mo Chit BTS Station</b><br>Lat: 13.7387, Lng: 100.5603").openPopup();
+
+var marker4 = L.marker([13.7195, 100.5342],{icon: pic4}).addTo(map);
+marker4.bindPopup("<b>Surasak BTS Station</b><br>Lat: 13.7195, Lng: 100.5342").openPopup();
+
+var marker5 = L.marker([13.7606, 100.4993],{icon: pic5}).addTo(map);
+marker5.bindPopup("<b>Chong Nonsi BTS Station</b><br>Lat: 13.7606, Lng: 100.4993").openPopup();
+</script>
+</body>
+</html>
